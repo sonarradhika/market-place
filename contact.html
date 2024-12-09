@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>The Marketplace</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Limelight&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/websitelogo.jpg" alt="Marketplace Logo" class="logo">
+        <h1>The Marketplace</h1>
+    </header>
+
+    <nav>
+        <button id="nav-toggle" aria-label="Toggle Navigation">☰</button>
+        <div id="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="rooms.html">Room</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="carts.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- contact.html -->
+    <form action="#" method="post" id="theForm">
+        <fieldset>
+            <legend>Contact Us</legend>
+            <h2>Online Inquiry</h2>
+            <div class="two">
+                <label for="firstName">First Name<span class="tooltip">In the format XXX XXX XXXX or XXX-XXX-XXXX or
+                        XXXXXXXXXX.</span></label>
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="two"><label for="lastName">Last Name</label><input type="text" name="lastName" id="lastName"
+                    required></div>
+            <div class="two"><label for="email">Email Address</label><input type="email" name="email" id="email"
+                    required></div>
+            <div class="two"><label for="phone">Phone Number<span class="tooltip">In the format XXX XXX XXXX or
+                        XXX-XXX-XXXX or XXXXXXXXXX.</span></label><input type="text" name="phone" id="phone" required>
+            </div>
+            <div class="two"><label for="interest">Interest</label><select name="interest" id="interest">
+                    <option value="">Select Interest</option>
+                    <option value="ET">Electronics</option>
+                    <option value="FU">Furniture</option>
+                    <option value="GA">Garden</option>
+                </select></div>
+            <div class="two"><label for="message">Message<br><span class="tooltip">Enter your message clearly and
+                        concisely. Avoid including sensitive information like credit card details. Maximum length: 20
+                        words</span></label>
+                <textarea name="message" id="message" rows="4" cols="50" placeholder="Enter your message (Max 20 words)"
+                    required></textarea>
+
+                <!-- <input type="message" name="message" id="message"> -->
+            </div>
+            <div class="one">
+                <input type="checkbox" name="terms" id="terms" required> I agree to the terms.
+            </div>
+            <div class="one"><input type="submit" value="Register" id="submit"></div>
+
+        </fieldset>
+    </form>
+    <footer class="footer-content">
+        <section class="sitemap">
+            <h2>Site Map</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="rooms.html">Room</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="carts.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+        <section class="social-wrapper">
+            <h2>Follow Us</h2>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+            </ul>
+            <p>&copy; 2024 The Marketplace. All rights reserved.</p>
+        </section>
+    </footer>
+    <script src="js/utilities.js"></script>
+    <script src="js/errorMessages.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/script.js defer"></script>
+</body>
+
+</html>

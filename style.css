@@ -1,0 +1,895 @@
+/* General Reset and Styling */
+* {
+    font-family: "Lucida Sans", Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Limelight", sans-serif;
+}
+
+p {
+    font-family: "Alata", sans-serif;
+}
+
+/* Body Grid Layout */
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    grid-area: header;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+header .logo {
+    width: 50px;
+    height: 24px;
+
+}
+
+header h1 {
+    color: #000000;
+    font-size: 1.8em;
+}
+
+/* Navigation Styles */
+nav {
+    grid-area: nav;
+    background-color: #ce2020;
+    padding: 1em;
+    width: 100%;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+    font-family: "Limelight", sans-serif;
+}
+
+nav a:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+/* Hamburger Menu for Small Screens */
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+#nav-menu {
+    display: flex;
+}
+
+main {
+    width: 100%;
+    height: 700px;
+}
+
+/* Hero Section for home page */
+#hero {
+    background-image: url('../images/main.jpg');
+    /*https://unsplash.com/photos/yellow-and-red-window-along-on-green-painted-wall-h1-ltmjr0bc*/
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    text-align: left;
+    color: white;
+    padding: 4em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 45vh;
+    /* Full height for hero section */
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#hero p {
+    font-size: 1.5em;
+    line-height: 1.8;
+}
+
+/* Categories Section */
+#categories {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: space-between;
+    padding: 0.5em 0;
+}
+
+#categories article {
+    padding: 1em;
+    text-align: center;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+#categories img {
+    width: 135px;
+    height: auto;
+}
+
+/*room page main section*/
+
+#room-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#room-categories article {
+    background-color: #f0f0f0;
+    /* Default background color */
+    padding: 0.8em;
+    text-align: left;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-start;*/
+    justify-content: space-between;
+    /*width: 100%;*/
+    height: 100%;
+}
+
+/* Set different background colors for specific blocks */
+#room-categories article:nth-child(1),
+#room-categories article:nth-child(4) {
+    background-color: #d8f5d8;
+    /* Light green for block 1 and 4 */
+}
+
+#room-categories article:nth-child(2),
+#room-categories article:nth-child(3) {
+    background-color: #fcf3ce;
+    /* Light yellow for block 2 and 3 */
+}
+
+#room-categories img {
+    width: 135px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#room-categories h2 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+#room-categories p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+#room-categories button {
+    background: linear-gradient(to right, #f35b5b, #f07c7c);
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    max-width: 200px;
+    align-self: flex-start;
+}
+
+#room-categories button:hover {
+    background: linear-gradient(to right, #e13d3d, #d14747);
+}
+
+/*product page main*/
+#product-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    margin-left: 2%;
+}
+
+#product-showcase img {
+    width: auto;
+    height: auto;
+}
+
+#color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#color-options span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#product-categories {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#product-categories figure {
+    text-align: center;
+    width: 150px;
+}
+
+#product-categories img {
+    width: 135px;
+    height: auto;
+
+}
+
+
+/* Main Section Layout for cart */
+.cart-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Full Frame Side: Product Details */
+#fullframe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Left Side: Product Details */
+#left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-block {
+    background-color: #e2fab5;
+    border: 2px solid #ddd;
+    padding: 15px;
+    /*max-width: 100%;*/
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.product img {
+    width: 10%;
+    height: auto;
+    max-width: 100%;
+}
+
+.product-details h4 {
+    font-family: 'Limelight', serif;
+    margin: 0;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.product-details p {
+    font-family: 'Alata', sans-serif;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Alata', sans-serif;
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #c9302c;
+}
+
+.quantity input {
+    width: 29px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons Section */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    margin-top: 10%;
+    margin-right: 30%;
+    max-width: 100%;
+}
+
+.buttons-container button {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #ce2020, rgb(231, 154, 154));
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+    background: linear-gradient(90deg, #ce2020, rgb(231, 154, 154));
+}
+
+/* Right Side: Shipping, Coupon, and Total */
+#right-side {
+    background-color: #e2fab5;
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+}
+
+.summary h3 {
+    font-family: 'Limelight', serif;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.shipping-info,
+.coupon-info,
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.shipping-info input,
+.coupon-info input {
+    padding: 8px;
+    font-family: 'Alata', sans-serif;
+    border: 1px solid green;
+    border-radius: 4px;
+}
+
+.shipping-info button,
+.coupon-info button,
+.cart-total button {
+    padding: 10px;
+    font-family: 'Alata', sans-serif;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #ce2020, rgb(231, 154, 154));
+    color: white;
+    cursor: pointer;
+}
+
+.shipping-info button:hover,
+.coupon-info button:hover,
+.cart-total button:hover {
+    background: linear-gradient(90deg, #ce2020, rgb(231, 154, 154));
+}
+
+.cart-total p {
+    font-family: 'Alata', sans-serif;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.cart-total span {
+    font-weight: bold;
+    color: black;
+}
+
+
+/*contact form*/
+
+form {
+    background-color: rgb(169, 240, 169);
+    margin: 0 auto;
+    padding: 14px;
+    border: solid 2px #88A61B;
+    width: 70%
+}
+
+div {
+    clear: both;
+    padding-top: 10px;
+
+
+}
+
+div.message label {
+    font-weight: bold;
+    float: left;
+    width: 200px;
+    text-align: right;
+    font-family: 'Alata', sans-serif;
+    padding-right: 8px;
+    position: relative;
+}
+
+div.message input,
+div.message select {
+    float: left;
+    width: 350px;
+    text-align: left;
+    font-family: 'Alata', sans-serif;
+    height: 80px;
+}
+
+div.message select {
+    width: 157px;
+
+}
+
+div.two label {
+    font-weight: bold;
+    float: left;
+    width: 200px;
+    text-align: right;
+    font-family: 'Alata', sans-serif;
+    padding-right: 8px;
+    position: relative;
+}
+
+div.two input,
+div.two select {
+    float: left;
+    width: 150px;
+    text-align: left;
+    font-family: 'Alata', sans-serif;
+}
+
+div.two select {
+    width: 157px;
+
+}
+
+div.one {
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+}
+
+#submit {
+    clear: both;
+    width: 125px;
+    height: 30px;
+    background: #20a120;
+    text-align: center;
+    font-family: 'Limelight', sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tooltip {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 25em;
+    top: 0;
+    width: 10em;
+    padding: 0.5em;
+    font-weight: normal;
+    color: #FFF;
+    background-color: #88A61B;
+    border: solid 2px #0E3D59;
+}
+
+.error {
+    color: #D92525;
+}
+
+span.error {
+    padding-left: 10px;
+}
+
+.valid {
+    color: #20a120;
+}
+
+span.valid {
+    padding-left: 10px;
+}
+
+/* Footer Section */
+footer {
+    grid-area: footer;
+    background-color: #20a120;
+    width: 100%;
+    min-height: 100px;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+footer .sitemap ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+footer .sitemap ul li {
+    margin-bottom: 5px;
+}
+
+footer .sitemap ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Limelight", sans-serif;
+    font-size: 0.9rem;
+}
+
+footer .social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap: 5px;
+}
+
+footer .social-wrapper p {
+    color: white;
+    font-family: "Alata", sans-serif;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+.social-media img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    /* Navigation */
+    #nav-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li a {
+        padding: 1em;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    nav ul li a:hover {
+        background: #555;
+    }
+
+    /* Main Content */
+    main {
+        padding: 1em;
+    }
+
+    /* Hero Section */
+    #hero {
+        height: auto; /* Adjust height dynamically */
+        padding: 2em 1em;
+    }
+
+    #hero h2 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    /* Categories Section */
+    #categories {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #categories article {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Room Categories */
+    #room-categories {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    #room-categories img {
+        max-width: 80%;
+    }
+
+    #room-categories h2 {
+        font-size: 1.2em;
+    }
+
+    #room-categories p {
+        font-size: 0.9em;
+    }
+
+    #room-categories button {
+        padding: 0.8em 1.2em;
+        font-size: 0.9em;
+    }
+
+    /* Product Categories */
+    #product-categories {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #product-categories figure {
+        width: 100%;
+        text-align: center;
+    }
+
+    #product-categories img {
+        max-width: 100%;
+    }
+
+    /* Cart Layout */
+    .cart-content {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    #left-side {
+        gap: 15px;
+    }
+
+    .product-block {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #right-side {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .summary h3 {
+        font-size: 1em;
+    }
+
+    .shipping-info,
+    .coupon-info,
+    .cart-total {
+        gap: 8px;
+    }
+
+    /* Responsive CSS for Contact Form */
+    form.contact {
+        display: flex;
+        gap: 20px;
+    }
+
+    div.two input,
+    div.two textarea {
+        width: 95%;
+        /* Reduce width of inputs and textareas */
+    }
+
+    div.two label {
+        float: none;
+        /* Remove float for labels */
+        text-align: left;
+        /* Align text to the left */
+        width: 100%;
+        /* Labels take full width */
+        padding-right: 0;
+        /* No padding on the right */
+        margin-bottom: 5px;
+        /* Add spacing below labels */
+        font-size: 14px;
+        /* Adjust font size */
+    }
+
+    div.two input,
+    div.two select {
+        float: none;
+        /* Remove float for inputs and selects */
+        width: 100%;
+        /* Inputs and selects span full width */
+        margin-bottom: 10px;
+        /* Add spacing below inputs */
+        font-size: 14px;
+        /* Adjust font size for readability */
+    }
+
+    div.two1 input {
+        float: none;
+        /* Remove float for inputs and selects */
+        width: 100%;
+        /* Inputs and selects span full width */
+        margin-bottom: 10px;
+        /* Add spacing below inputs */
+        font-size: 14px;
+        /* Adjust font size for readability */
+        height: 25px;
+        /* Adjust height to match the label */
+
+    }
+
+    div.one {
+        font-size: 14px;
+        /* Smaller font size for centered text */
+    }
+
+    #submit {
+        width: 100%;
+        /* Button spans the entire width */
+        height: 40px;
+        /* Slightly larger height for touch devices */
+        font-size: 16px;
+        /* Larger font for better visibility */
+        line-height: 38px;
+        /* Center text vertically */
+    }
+
+    .tooltip {
+        position: relative;
+        /* Adjust tooltip position for small screens */
+        left: 0;
+        /* Align tooltip relative to the input field */
+        top: 1em;
+        /* Place tooltip below the input */
+        width: 100%;
+        /* Tooltip spans the width of the screen */
+        font-size: 12px;
+        /* Smaller font for better fitting */
+    }
+
+    .error {
+        font-size: 12px;
+        /* Adjust error font size */
+    }
+
+    span.error {
+        padding-left: 5px;
+        /* Adjust padding for spacing */
+    }
+
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-wrapper {
+        align-items: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>The Marketplace</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Limelight&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/websitelogo.jpg" alt="Marketplace Logo" class="logo">
+        <h1>The Marketplace</h1>
+    </header>
+
+    <nav>
+        <button id="nav-toggle" aria-label="Toggle Navigation">☰</button>
+        <div id="nav-menu">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="rooms.html">Room</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="carts.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="cart-layout">
+        <div class="cart-content">
+
+            <section id="left-side">
+                <h2>Your Cart</h2>
+
+                <!-- Product 1 -->
+                <article class="product-block">
+                    <h3>Product 1</h3>
+                    <section class="product">
+                        <h4>Product Details</h4>
+                        <img src="images/whitechair.jpg" alt="Leather Chairs">
+                        <section class="product-details">
+                            <h5>Office Chairs</h5>
+                            <p>Price: $100</p>
+                            <section class="quantity">
+                                <h6>Quantity</h6>
+                                <button>-</button>
+                                <input type="text" value="2">
+                                <button>+</button>
+                            </section>
+                            <p>Total Price: $200</p>
+                        </section>
+                    </section>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-block">
+                    <h3>Product 2</h3>
+                    <section class="product">
+                        <h4>Product Details</h4>
+                        <img src="images/blackchair.jpg" alt="Office Chairs">
+                        <section class="product-details">
+                            <h5>Office Chairs</h5>
+                            <p>Price: $150</p>
+                            <section class="quantity">
+                                <h6>Quantity</h6>
+                                <button>-</button>
+                                <input type="text" value="4">
+                                <button>+</button>
+                            </section>
+                            <p>Total Price: $600</p>
+                        </section>
+                    </section>
+                </article>
+
+                <!-- Buttons Section -->
+                <section class="buttons-container">
+                    <h3>Assistance</h3>
+                    <button>Free Shipping</button>
+                    <button>Call Us Anytime</button>
+                    <button>Chat with Us</button>
+                </section>
+            </section>
+
+            <!-- Right Side: Shipping and Coupon -->
+            <section id="right-side">
+                <h2>Shipping and Coupons</h2>
+                <article class="summary">
+                    <h3>Order Summary</h3>
+                    <section class="shipping-info">
+                        <h4>Calculated Shipping</h4>
+                        <input type="text" placeholder="Country">
+                        <input type="text" placeholder="State/City">
+                        <input type="text" placeholder="Zip Code">
+                        <button>Update</button>
+                    </section>
+                    <hr>
+                    <section class="coupon-info">
+                        <h3>Coupon Code</h3>
+                        <input type="text" placeholder="Enter Coupon">
+                        <button>Apply</button>
+                    </section>
+                    <hr>
+                    <section class="cart-total">
+                        <h3>Cart Totals</h3>
+                        <p>Cart Total: <span>$800</span></p>
+                        <p>Cart Subtotal: <span>$750</span></p>
+                        <p>Discount: <span>$50</span></p>
+                        <button>Checkout</button>
+                    </section>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-content">
+        <section class="sitemap">
+            <h2>Site Map</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="rooms.html">Room</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="carts.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+        <section class="social-wrapper">
+            <h2>Follow Us</h2>
+            <ul class="social-media">
+                <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt="YouTube"></a></li>
+            </ul>
+            <p>&copy; 2024 The Marketplace. All rights reserved.</p>
+        </section>
+    </footer>
+    <script src="js/script.js defer"></script>
+</body>
+
+</html>
